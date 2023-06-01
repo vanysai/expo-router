@@ -2,13 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Link } from "expo-router";
 
-
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Bem-vindo ao Home!</Text>
-      <Image source={require('../assets/chopper.png')}></Image>
-      <Link href="/TelaA" style={styles.buttonText}>Ir para a Tela A</Link>
+      <Text style={styles.titulo}>Tela C</Text>
+      <Image style={styles.image} source={require('../assets/Botao1.png')}></Image>
+      <br></br>
+      <Text style={styles.paragraph}>Blablablablablabal </Text>
+      <br></br>
+      <Link href="/TelaD" style={styles.buttonText}>Ir para a tela de cadastro</Link>
       <StatusBar style="auto" />
     </View>
   );
@@ -26,6 +28,11 @@ const styles = StyleSheet.create({
     color: '#ff747a',
     fontWeight: 'bold',
 
+  },
+  paragraph:{
+    fontSize: 15,
+    textAlign: 'center',
+    fontWeight: 'bold'
   },
   buttonText: {
     backgroundColor: 'transparent',
@@ -47,4 +54,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  image:{
+    width: 200,
+    height: 150,
+  }
 });

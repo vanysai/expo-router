@@ -1,31 +1,52 @@
 import { Tabs } from "expo-router";
+import Icon from 'react-native-vector-icons/Feather';
 
 export default function AppLayout() {
   return (
     <Tabs>
       <Tabs.Screen
-        // Name of the route to hide.
         name="index"
-            options={{
-            // This tab will no longer show up in the tab bar.
-            href: '/',
+        options={{
+          href: '/',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="home" color={color} size={size} />
+          ),
         }}
       />
       <Tabs.Screen
-        // Name of the route to hide.
         name="TelaA"
-            options={{
-            // This tab will no longer show up in the tab bar.
-            href: 'TelaA',
+        options={{
+          href: 'TelaA',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="code" color={color} size={size} />
+          ),
         }}
       />
       <Tabs.Screen
-        // Name of the route to hide.
         name="TelaB"
-            options={{
-            // null = tira a referencia do href
-            // This tab will no longer show up in the tab bar.
-            href: 'TelaB',
+        options={{
+          href: 'TelaB',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="code" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="TelaC"
+        options={{
+          href: 'TelaC',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="code" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Cadastro"
+        options={{
+          href: 'Cadastro',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="star" color={color} size={size} />
+          ),
         }}
       />
     </Tabs>
